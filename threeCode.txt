@@ -1,0 +1,2 @@
+Copy & paste into js file.
+https://threejs.org/build/three.js
