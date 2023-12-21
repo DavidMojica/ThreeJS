@@ -11,13 +11,15 @@
 
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/astronaut.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/BtnSpace.css">
     <title>ThreeJS | D-DEV</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-black">
+    <nav class="navbar navbar-expand-lg bg-black z-1">
         <div class="container">
             <a href="#" class="navbar-brand">
-                <img src="" class="" width="250" alt="">
+                <img src="resources/logo.png" class="" width="200" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,15 +28,33 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item m-1">
                         <div class="dropdown-center">
-                            <button type="button" class="btn btn_">
-
+                            <button class="btn-space dropdown-toggle" type="button" data-bs-toggle="dropdown"  aria-expanded="false">
+                                <strong>BASIC</strong>
+                                <div id="container-stars">
+                                  <div id="stars"></div>
+                                </div>
+                              
+                                <div id="glow">
+                                  <div class="circle-space"></div>
+                                  <div class="circle-space"></div>
+                                </div>
                             </button>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><a href="/sm_llamadas" class="dropdown-item text-light">Atención urgencias</a></li>
+                                <li><a href="/sm_HPC" class="dropdown-item">Asesorías psicológicas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a href="/sm_historial_citas" class="dropdown-item">Historial de asesorías</a></li>
+                                <li><a href="/sm_historial_llamadas" class="dropdown-item">Historial de llamadas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a href="/pacientesView" class="dropdown-item">Pacientes</a></li>
+                            </ul>
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="box-of-star1">
         <div class="star star-position1"></div>
         <div class="star star-position2"></div>
