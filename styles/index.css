@@ -4,4 +4,8 @@
 }
 body{
     overflow-x: hidden;
+    overflow-y: hidden;
+}
+.navbar{
+    z-index: 15;
 }
