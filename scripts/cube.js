@@ -1,3 +1,4 @@
+// Escena
 const scene = new THREE.Scene();
 
 // Cámara
@@ -17,23 +18,27 @@ const material = new THREE.MeshBasicMaterial({ color: 0xfff });
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
-
+// Función para manejar el cambio de tamaño del div
 function handleResize() {
-    const newWidth = window.innerWidth;
-    const newHeight = window.innerHeight;
+    const newWidth = element.clientWidth;
+    const newHeight = element.clientHeight;
 
     cam.aspect = newWidth / newHeight;
     cam.updateProjectionMatrix();
 
     renderer.setSize(newWidth, newHeight);
 }
+
+// Llamada a handleResize cuando cambia el tamaño del div
 window.addEventListener('resize', handleResize);
 
-function animate(){
+// Animación
+function animate() {
     requestAnimationFrame(animate);
     cube.rotation.x += 0.01;
     cube.rotation.y += 0.01;
     renderer.render(scene, cam);
 }
-handleResize();
+
+handleResize(); // Llamada inicial para ajustar el tamaño
 animate();
