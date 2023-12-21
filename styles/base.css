@@ -1,0 +1,39 @@
+:root{
+    --github: #6a1d9b;
+    --javascript: #FFCA28;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Consolas';
+}
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+.navbar{
+    z-index: 15;
+}
+.resalt{
+    z-index: 15;
+    position: relative;
+}
+
+
+.color-github{
+    color: var(--github);
+}
+.color-javascript{
+    color:var(--javascript)
+}
+.color-black{
+    color: black;
+}
+
+
+@media (max-width:768px) {
+    .btn-space{
+        width: 100%;
+    }
+}

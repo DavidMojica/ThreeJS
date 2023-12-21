@@ -1,11 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 body{
-    overflow-x: hidden;
     overflow-y: hidden;
+    height: 100vh;
 }
-.navbar{
-    z-index: 15;
+h2{
+    color: aliceblue;
+}
+.bottom-text{
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
 }
