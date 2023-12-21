@@ -1,6 +1,13 @@
 body{
     overflow-y: hidden;
+    height: 100vh;
 }
 h2{
     color: aliceblue;
+}
+.bottom-text{
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    width: 100%;
 }
