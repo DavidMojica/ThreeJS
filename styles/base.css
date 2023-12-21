@@ -15,6 +15,10 @@ body{
 .navbar{
     z-index: 15;
 }
+.resalt{
+    z-index: 15;
+    position: relative;
+}
 
 
 .color-github{
@@ -25,4 +29,11 @@ body{
 }
 .color-black{
     color: black;
+}
+
+
+@media (max-width:768px) {
+    .btn-space{
+        width: 100%;
+    }
 }
