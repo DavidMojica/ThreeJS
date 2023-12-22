@@ -1,3 +1,6 @@
+import * as THREE from './three.module.js';
+import { OrbitControls } from './THREEJSORBITCONTROLS.js';
+
 // Escena
 const scene = new THREE.Scene();
 //scene.background = new THREE.Color(0x666666);
