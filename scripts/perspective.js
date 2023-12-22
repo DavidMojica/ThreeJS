@@ -4,11 +4,10 @@ const scene = new THREE.Scene();
 
 // Cámara
 const cam = new THREE.PerspectiveCamera(55, 1, 0.1, 1000);
-cam.position.z = 15;
+cam.position.z = 5;
 cam.position.y = -10;
-cam.rotation.y = -10;
-cam.rotation.x = 10;
-
+cam.rotation.x = 1;
+// cam.rotation.y = -10;
 
 // Renderizador
 const renderer = new THREE.WebGLRenderer({alpha: true}); //alpha: transparencia
@@ -21,13 +20,14 @@ element.appendChild(renderer.domElement);
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0xfff });
 const cube = new THREE.Mesh(geometry, material);
-cube.castShadow = true;
+cube.castShadow = true; // Generar sombras
+cube.position.set(1,2,2);
 scene.add(cube);
 
 // LIGHT
 var light = new THREE.DirectionalLight(0xffffff, 1, 100);
 light.position.set(0,1,1);
-light.castShadow = true;
+light.castShadow = true; // Generar sombras
 scene.add(light);
 
 //grid
@@ -37,6 +37,11 @@ scene.add(light);
 // PLANE
 var planeGeometry = new THREE.PlaneGeometry(20,20,32,32);
 var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
+var plane = new THREE.Mesh(planeGeometry, planeMaterial);
+plane.receiveShadow = true; //Recibir sombras
+plane.position.set(0,0,0);
+scene.add(plane);
+
 
 // Función para manejar el cambio de tamaño del div
 function handleResize() {
