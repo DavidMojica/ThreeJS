@@ -21,6 +21,7 @@ element.appendChild(renderer.domElement);
 const geometry = new THREE.BoxGeometry(1,1,1);
 const material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
 const cube = new THREE.Mesh(geometry, material);
+const cube2 = new THREE.Mesh(geometry, material);
 cube.castShadow = true; // Generar sombras
 cube.receiveShadow = true; // Permitir que el cubo reciba sombras
 cube.position.set(0,0,2);
