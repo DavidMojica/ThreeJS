@@ -21,11 +21,22 @@ element.appendChild(renderer.domElement);
 const geometry = new THREE.BoxGeometry();
 const material = new THREE.MeshBasicMaterial({ color: 0xfff });
 const cube = new THREE.Mesh(geometry, material);
+cube.castShadow = true;
 scene.add(cube);
 
+// LIGHT
+var light = new THREE.DirectionalLight(0xffffff, 1, 100);
+light.position.set(0,1,1);
+light.castShadow = true;
+scene.add(light);
+
 //grid
-var grid = new THREE.GridHelper(100, 100); //numero de cuadrados que va a tener la malla
-scene.add(grid);
+// var grid = new THREE.GridHelper(100, 100); //numero de cuadrados que va a tener la malla
+// scene.add(grid);
+
+// PLANE
+var planeGeometry = new THREE.PlaneGeometry(20,20,32,32);
+var planeMaterial = new THREE.MeshBasicMaterial({color: 0xff0000});
 
 // Función para manejar el cambio de tamaño del div
 function handleResize() {
