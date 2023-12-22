@@ -1,3 +1,6 @@
+import * as THREE from './three.module.js';
+import { OrbitControls } from './THREEJSORBITCONTROLS.js';
+
 // Escena
 const scene = new THREE.Scene();
 //scene.background = new THREE.Color(0x666666);
@@ -45,6 +48,14 @@ var plane = new THREE.Mesh(planeGeometry, planeMaterial);
 plane.receiveShadow = true; //Recibir sombras
 plane.position.set(0,0,0);
 scene.add(plane);
+
+//ORBIT
+const controls = new OrbitControls(cam, renderer.domElement);
+// controls.enableZoom = false; activar/desactivar zoom
+controls.minDistance = 1;
+controls.maxDistance = 15;
+controls.enableDamping = true;
+controls.dampingFactor = 0.1;
 
 
 // Función para manejar el cambio de tamaño del div
