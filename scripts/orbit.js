@@ -49,6 +49,8 @@ plane.receiveShadow = true; //Recibir sombras
 plane.position.set(0,0,0);
 scene.add(plane);
 
+//ORBIT
+
 
 // Función para manejar el cambio de tamaño del div
 function handleResize() {
