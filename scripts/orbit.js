@@ -50,6 +50,10 @@ plane.position.set(0,0,0);
 scene.add(plane);
 
 //ORBIT
+const controls = new OrbitControls(cam, renderer.domElement);
+// controls.enableZoom = false; activar/desactivar zoom
+controls.minDistance = 1;
+controls.maxDistance = 15;
 
 
 // Función para manejar el cambio de tamaño del div
