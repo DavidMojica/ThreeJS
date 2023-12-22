@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
@@ -8,18 +8,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- fa icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="shortcut icon" href="resources/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/astronaut.css">
-    <link rel="stylesheet" href="styles/BtnSpace.css">
-    <link rel="stylesheet" href="styles/base.css">
-    <title>ThreeJS | D-DEV</title>
-</head>
-<body>
+    <link rel="stylesheet" href="../../styles/BtnSpace.css">
+    <link rel="stylesheet" href="../../styles/cube.css">
+    <link rel="stylesheet" href="../../styles/base.css">
+    <link rel="shortcut icon" href="../../resources/logo.png" type="image/x-icon">
+    <title>Perspective | D-DEV</title>
+ </head>
+ <body>
     <nav class="navbar navbar-expand-lg bg-transparent">
         <div class="container">
-            <a href="#" class="navbar-brand">
-                <img src="resources/logo.png" class="" width="200" alt="">
+            <a href="../../index.html" class="navbar-brand">
+                <img src="../../resources/logo.png" class="" width="200" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -40,9 +39,9 @@
                                 </div>
                             </button>
                             <ul class="dropdown-menu bg-dark dropdown-menu-end text-center w-100">
-                                <li><a class="dropdown-item" href="templates/basic/shapes.html">Shapes</a></li>
-                                <li><a class="dropdown-item" href="templates/basic/perspective.html">Perspective</a></li>
-                                <li><a class="dropdown-item" href="templates/basic/orbit.html">Orbit</a></li>
+                                <li><a class="dropdown-item" href="shapes.html">Shapes</a></li>
+                                <li><a class="dropdown-item active" href="#">Perspective</a></li>
+                                <li><a class="dropdown-item" href="orbit.html">Orbit controls</a></li>
                             </ul>
                         </div>
                     </li>
@@ -60,7 +59,7 @@
                                 </div>
                             </button>
                             <ul class="dropdown-menu bg-dark dropdown-menu-start text-center w-100">
-                                <li><a class="dropdown-item" href="">Soon</a></li>
+                                <li><a class="dropdown-item" href="">SOON</a></li>
                             </ul>
                         </div>
                     </li>
@@ -78,7 +77,7 @@
                                 </div>
                             </button>
                             <ul class="dropdown-menu bg-dark dropdown-menu-start text-center w-100">
-                                <li><a class="dropdown-item" href="">Soon</a></li>
+                                <li><a class="dropdown-item" href="">SOON</a></li>
                             </ul>
                         </div>
                     </li>
@@ -86,59 +85,10 @@
             </div>
         </div>
     </nav>
+    <h1 class="display-3 text-center text-light">Perspective</h1>
+    <div id="element"></div>
 
-    <h2 class="text-center display-2 resalt">THREE<span class="badge bg-warning color-black fs-5">.JS</span> MODELS</h2>
-    
-    <div class="box-of-star1">
-        <div class="star star-position1"></div>
-        <div class="star star-position2"></div>
-        <div class="star star-position3"></div>
-        <div class="star star-position4"></div>
-        <div class="star star-position5"></div>
-        <div class="star star-position6"></div>
-        <div class="star star-position7"></div>
-    </div>
-    <div class="box-of-star2">
-    <div class="star star-position1"></div>
-    <div class="star star-position2"></div>
-    <div class="star star-position3"></div>
-    <div class="star star-position4"></div>
-    <div class="star star-position5"></div>
-    <div class="star star-position6"></div>
-    <div class="star star-position7"></div>
-    </div>
-    <div class="box-of-star3">
-    <div class="star star-position1"></div>
-    <div class="star star-position2"></div>
-    <div class="star star-position3"></div>
-    <div class="star star-position4"></div>
-    <div class="star star-position5"></div>
-    <div class="star star-position6"></div>
-    <div class="star star-position7"></div>
-    </div>
-    <div class="box-of-star4">
-    <div class="star star-position1"></div>
-    <div class="star star-position2"></div>
-    <div class="star star-position3"></div>
-    <div class="star star-position4"></div>
-    <div class="star star-position5"></div>
-    <div class="star star-position6"></div>
-    <div class="star star-position7"></div>
-    </div>
-    <div data-js="astro" class="astronaut">
-    <div class="head"></div>
-    <div class="arm arm-left"></div>
-    <div class="arm arm-right"></div>
-    <div class="body">
-        <div class="panel"></div>
-    </div>
-    <div class="leg leg-left"></div>
-    <div class="leg leg-right"></div>
-    <div class="schoolbag"></div>
-    </div>
-
-    <div class="bottom-text">
-        <h2 class="text-center">With <i class="fa fa-heart text-danger"></i> by David Mojica <a href="https://github.com/DavidMojicaDev"><i class="fa fa-github color-github"></i></a></h2>
-    </div>
-</body>
-</html>
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="../../scripts/perspective.js"></script>
+ </body>
+ </html>
