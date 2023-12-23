@@ -1413,5 +1413,4 @@ class OrbitControls extends EventDispatcher {
 	}
 
 }
-
 export { OrbitControls };
